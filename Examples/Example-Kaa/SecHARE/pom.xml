@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>SecHARE</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <version.aspectjweaver>1.9.5</version.aspectjweaver>
+
+        <version.spring-security-core>5.4.5</version.spring-security-core>
+        <version.commons-lang3>3.4</version.commons-lang3>
+        <version.lombok>1.18.22</version.lombok>
+        <version.hikaricp>3.4.2</version.hikaricp>
+        <version.fastjson>1.2.75</version.fastjson>
+        <version.qdox>2.0.0</version.qdox>
+        <version.spoon-core>9.1.0</version.spoon-core>
+        <version.reflectasm>1.11.9</version.reflectasm>
+        <version.annotations>23.0.0</version.annotations>
+        <version.guava>18.0</version.guava>
+<!--        <version.spring-data-mongodb>3.0.3.RELEASE</version.spring-data-mongodb>-->
+        <version.spring-data-mongodb>1.9.4.RELEASE</version.spring-data-mongodb>
+<!--        <version.mongo-driver>3.12.7</version.mongo-driver>-->
+        <version.mongo-driver>3.0.1</version.mongo-driver>
+
+        <version.jsr305>3.0.2</version.jsr305>
+        <version.zt-exec>1.11</version.zt-exec>
+        <version.maven-jdk-tools-wrapper>0.1</version.maven-jdk-tools-wrapper>
+        <version.commons-io>2.7</version.commons-io>
+
+    </properties>
+
+    <dependencies>
+        <!-- AspectJ-->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${version.aspectjweaver}</version>
+        </dependency>
+
+        <!-- org.example -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${version.spring-security-core}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${version.commons-lang3}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${version.lombok}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>${version.hikaricp}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${version.fastjson}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.thoughtworks.qdox</groupId>
+            <artifactId>qdox</artifactId>
+            <version>${version.qdox}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.inria.gforge.spoon</groupId>
+            <artifactId>spoon-core</artifactId>
+            <version>${version.spoon-core}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.esotericsoftware</groupId>
+            <artifactId>reflectasm</artifactId>
+            <version>${version.reflectasm}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>${version.annotations}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${version.guava}</version>
+        </dependency>
+        <!-- MongoDb-->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>${version.mongo-driver}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+            <version>${version.spring-data-mongodb}</version>
+        </dependency>
+
+        <!-- de.inversdwin -->
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>${version.jsr305}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.zeroturnaround</groupId>
+            <artifactId>zt-exec</artifactId>
+            <version>${version.zt-exec}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.olivergondza</groupId>
+            <artifactId>maven-jdk-tools-wrapper</artifactId>
+            <version>${version.maven-jdk-tools-wrapper}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${version.commons-io}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+ <!--        <repository>-->
+<!--            <id>LocalRepository</id>-->
+<!--            <name>LocalRepository</name>-->
+<!--            <url>file:///home/maven-3.6.0/repository</url>-->
+<!--        </repository>-->
+    </distributionManagement>
+
+</project>
